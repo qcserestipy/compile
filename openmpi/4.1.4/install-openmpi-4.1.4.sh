@@ -45,6 +45,8 @@ This module loads OpenMPI $OPENMPI_VERSION installed in $INSTALL_DIR.
 local version = "$OPENMPI_VERSION"
 local base    = "$INSTALL_DIR"
 
+load("pmix/4.1.1")
+
 -- environment variables
 setenv("MPI_HOME", base)
 

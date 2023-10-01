@@ -46,6 +46,9 @@ local base    = "$INSTALL_DIR"
 
 -- environment variables
 setenv("PMIX_ROOT", base)
+setenv("PMIX_PREFIX", base)
+setenv("PMIX_BIN_PATH", pathJoin(base, "bin"))
+setenv("PMIX_LIB_PATH", pathJoin(base, "lib"))
 
 -- add binaries to path
 prepend_path("PATH", pathJoin(base, "bin"))
