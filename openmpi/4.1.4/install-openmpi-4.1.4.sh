@@ -22,6 +22,7 @@ tar -xf ${STORE_DIR}/openmpi-$OPENMPI_VERSION.tar.gz -C $build_dir/.
 cd $build_dir/openmpi-$OPENMPI_VERSION
   ./configure --prefix=$INSTALL_DIR \
 	      --host=arm-linux-gnueabi \
+	      --with-slurm=yes \
 	      --build=$(build-aux/config.guess) \
 	      --with-pmix=$PMIX_ROOT 2>&1 | tee config.out
   make -j$(nproc) all 2>&1 | tee make.out

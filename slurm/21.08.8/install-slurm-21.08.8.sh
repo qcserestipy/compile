@@ -4,7 +4,7 @@
 set -xe
 
 # Version of OpenMPI to install
-VERSION="20.11.9"
+VERSION="21.08.8"
 NAME="slurm"
 INSTALL_DIR="/opt/shared/apps/${NAME}/$VERSION"
 LMOD_DIR="/opt/shared/modules/${NAME}"
