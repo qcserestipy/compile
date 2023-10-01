@@ -5,10 +5,11 @@ set -xe
 
 # Version of OpenMPI to install
 OPENMPI_VERSION="4.1.4"
-INSTALL_DIR="/opt/software/openmpi/$OPENMPI_VERSION"
-LMOD_DIR="/opt/ohpc/pub/modulefiles/openmpi"
-STORE_DIR="/opt/store"
+INSTALL_DIR="/opt/shared/apps/openmpi/$OPENMPI_VERSION"
+LMOD_DIR="/opt/shared/modules/openmpi"
+STORE_DIR="/opt/shared/store"
 
+module load pmix/4.1.1
 
 random_str=$(date +%s$RANDOM)
 build_dir="build-$random_str"
@@ -19,7 +20,10 @@ tar -xf ${STORE_DIR}/openmpi-$OPENMPI_VERSION.tar.gz -C $build_dir/.
 
 # Compile and install OpenMPI
 cd $build_dir/openmpi-$OPENMPI_VERSION
-  ./configure --prefix=$INSTALL_DIR 2>&1 | tee config.out
+  ./configure --prefix=$INSTALL_DIR \
+	      --host=arm-linux-gnueabi \
+	      --build=$(build-aux/config.guess) \
+	      --with-pmix=$PMIX_ROOT 2>&1 | tee config.out
   make -j$(nproc) all 2>&1 | tee make.out
   sudo make install 2>&1 | tee install.out
 cd ..

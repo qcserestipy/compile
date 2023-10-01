@@ -6,10 +6,10 @@ set -xe
 # Version to install
 VERSION="11.4.0"
 NAME="gcc"
-INSTALL_DIR="/opt/software/$NAME/$VERSION"
-LMOD_DIR="/opt/ohpc/pub/modulefiles/$NAME"
-STORE_DIR="/opt/store"
-
+INSTALL_DIR="/opt/shared/apps/$NAME/$VERSION"
+LMOD_DIR="/opt/shared/modules/$NAME"
+STORE_DIR="/opt/shared/store"
+start=$(pwd)
 
 random_str=$(date +%s$RANDOM)
 build_dir="build-$random_str"
@@ -21,18 +21,20 @@ tar -xf ${STORE_DIR}/${NAME}-${VERSION}.tar.gz -C $build_dir/${NAME}-${VERSION}
 
 # Compile and install
 cd $build_dir/${NAME}-${VERSION}/gcc-releases-${NAME}-${VERSION}
-  ./configure -v --build=x86_64-linux-gnu \
-                 --host=x86_64-linux-gnu \
-                 --target=x86_64-linux-gnu \
+  ./configure -v --build=aarch64-linux-gnu \
+                 --host=aarch64-linux-gnu \
+                 --target=aarch64-linux-gnu \
                  --prefix=${INSTALL_DIR} \
                  --enable-checking=release \
                  --enable-languages=c,c++,fortran \
                  --disable-multilib \
                  --program-suffix=-11.1  2>&1 | tee config.out
-  make -j$(nproc) 2>&1 | tee make.out
+  make -j 2 2>&1 | tee make.out
   make install-strip 2>&1 | tee install.out
-cd ..
-mv ${NAME}-${VERSION}/* $INSTALL_DIR/.
+mv * $INSTALL_DIR/.
+cd $start
+
+chown -R pi: $INSTALL_DIR
 
 rm -rf $build_dir
 
