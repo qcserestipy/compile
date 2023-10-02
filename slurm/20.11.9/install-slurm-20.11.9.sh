@@ -20,14 +20,14 @@ tar -xf ${STORE_DIR}/${NAME}-${VERSION}.tar.bz2 -C $build_dir/.
 
 # Compile and install 
 
-ml load pmix/4.1.4
-ml load openmpi/4.1.1
 export LD_LIBRARY_PATH=/opt/shared/apps/pmix/4.1.1/lib:$LD_LIBRARY_PATH
 cd $build_dir/${NAME}-${VERSION}
   ./configure --prefix=$INSTALL_DIR \
 	      --enable-deprecated=yes \
-              --with-pmix-libdir=/opt/shared/apps/pmix/4.1.1/lib \
-              --with-pmix-includedir=/opt/shared/apps/pmix/4.1.1/include 2>&1 | tee config.out
+	      --with-pmix=/opt/shared/apps/pmix/2.5.5:/opt/shared/apps/pmix/3.2.2 2>&1 | tee config.out
+
+#              --with-pmix-libdir=/opt/shared/apps/pmix/4.1.1/lib \
+#              --with-pmix-includedir=/opt/shared/apps/pmix/4.1.1/include 2>&1 | tee config.out
 #	      --with-pmix="/opt/shared/apps/pmix/4.1.1/include" 2>&1 | tee config.out
   make -j4 all 2>&1 | tee make.out
   make install 2>&1 | tee install.out

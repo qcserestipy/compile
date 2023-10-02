@@ -9,7 +9,6 @@ INSTALL_DIR="/opt/shared/apps/openmpi/$OPENMPI_VERSION"
 LMOD_DIR="/opt/shared/modules/openmpi"
 STORE_DIR="/opt/shared/store"
 
-module load pmix/4.1.1
 
 random_str=$(date +%s$RANDOM)
 build_dir="build-$random_str"
@@ -19,12 +18,17 @@ mkdir $build_dir
 tar -xf ${STORE_DIR}/openmpi-$OPENMPI_VERSION.tar.gz -C $build_dir/.
 
 # Compile and install OpenMPI
+module load pmix/4.1.1
 cd $build_dir/openmpi-$OPENMPI_VERSION
   ./configure --prefix=$INSTALL_DIR \
+	      --with-slurm \
 	      --host=arm-linux-gnueabi \
-	      --with-slurm=yes \
-	      --build=$(build-aux/config.guess) \
-	      --with-pmix=$PMIX_ROOT 2>&1 | tee config.out
+	      --enable-mpirun-prefix-by-default \
+	      --with-pmix=${PMIX_ROOT} 2>&1 | tee config.out
+
+
+#	      --build=$(build-aux/config.guess) \
+
   make -j$(nproc) all 2>&1 | tee make.out
   sudo make install 2>&1 | tee install.out
 cd ..
