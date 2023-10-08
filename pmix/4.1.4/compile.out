@@ -1,0 +1,2731 @@
+nohup: ignoring input
++ VERSION=4.1.1
++ NAME=pmix
++ INSTALL_DIR=/opt/shared/apps/pmix/4.1.1
++ LMOD_DIR=/opt/shared/modules/pmix
++ STORE_DIR=/opt/shared/store
+++ date +%s16709
++ random_str=169676672916709
++ build_dir=build-169676672916709
++ mkdir build-169676672916709
++ tar -xf /opt/shared/store/pmix-4.1.1.tar.gz -C build-169676672916709/.
++ module load gcc/11.1.0
+++ /usr/share/lmod/lmod/libexec/lmod bash load gcc/11.1.0
++ eval 'LMOD_DEFAULT_MODULEPATH="/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles";' export 'MODULEPATH;' 'CC="/opt/shared/apps/gcc/11.1.0/bin/gcc";' export 'CC;' 'CXX="/opt/shared/apps/gcc/11.1.0/bin/g++";' export 'CXX;' 'FC="/opt/shared/apps/gcc/11.1.0/bin/gfortran";' export 'FC;' 'LD_LIBRARY_PATH="/opt/shared/apps/gcc/11.1.0/lib64";' export 'LD_LIBRARY_PATH;' 'LMOD_DEFAULT_MODULEPATH="/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'LMOD_FAMILY_GCC="gcc";' export 'LMOD_FAMILY_GCC;' 'LMOD_FAMILY_GCC_VERSION="11.1.0";' export 'LMOD_FAMILY_GCC_VERSION;' 'LOADEDMODULES="gcc/11.1.0";' export 'LOADEDMODULES;' 'MODULEPATH="/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles";' export 'MODULEPATH;' 'PATH="/opt/shared/apps/gcc/11.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";' export 'PATH;' '_LMFILES_="/opt/shared/modules/gcc/11.1.0.lua";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MSxiYXNlTXBhdGhBPXsiL29wdC9zaGFyZWQvbW9kdWxlcyIsIi9ldGMvbG1vZC9tb2R1bGVzIiwiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17WyJnY2MiXT0iZ2NjIix9LGluYWN0aXZlPXt9LG1UPXtnY2M9e1siRk4iXT0iL29wdC9zaGFyZWQvbW9kdWxlcy9nY2MvMTEuMS4wLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImdjYy8xMS4xLjAiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInNob3J0Il09ImdjYyIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LH0sbXBhdGhBPXsiL29wdC9zaGFyZWQv";' export '_ModuleTable001_;' '_ModuleTable002_="bW9kdWxlcyIsIi9ldGMvbG1vZC9tb2R1bGVzIiwiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL29wdC9zaGFyZWQvbW9kdWxlczovZXRjL2xtb2QvbW9kdWxlczovdXNyL3NoYXJlL2xtb2QvbG1vZC9tb2R1bGVmaWxlcyIsWyJ2ZXJzaW9uIl09Mix9";' export '_ModuleTable002_;' '_ModuleTable_Sz_="2";' export '_ModuleTable_Sz_;'
+++ LMOD_DEFAULT_MODULEPATH=/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles
+++ export LMOD_DEFAULT_MODULEPATH
+++ MODULEPATH=/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles
+++ export MODULEPATH
+++ CC=/opt/shared/apps/gcc/11.1.0/bin/gcc
+++ export CC
+++ CXX=/opt/shared/apps/gcc/11.1.0/bin/g++
+++ export CXX
+++ FC=/opt/shared/apps/gcc/11.1.0/bin/gfortran
+++ export FC
+++ LD_LIBRARY_PATH=/opt/shared/apps/gcc/11.1.0/lib64
+++ export LD_LIBRARY_PATH
+++ LMOD_DEFAULT_MODULEPATH=/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles
+++ export LMOD_DEFAULT_MODULEPATH
+++ LMOD_FAMILY_GCC=gcc
+++ export LMOD_FAMILY_GCC
+++ LMOD_FAMILY_GCC_VERSION=11.1.0
+++ export LMOD_FAMILY_GCC_VERSION
+++ LOADEDMODULES=gcc/11.1.0
+++ export LOADEDMODULES
+++ MODULEPATH=/opt/shared/modules:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles
+++ export MODULEPATH
+++ PATH=/opt/shared/apps/gcc/11.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH
+++ _LMFILES_=/opt/shared/modules/gcc/11.1.0.lua
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MSxiYXNlTXBhdGhBPXsiL29wdC9zaGFyZWQvbW9kdWxlcyIsIi9ldGMvbG1vZC9tb2R1bGVzIiwiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17WyJnY2MiXT0iZ2NjIix9LGluYWN0aXZlPXt9LG1UPXtnY2M9e1siRk4iXT0iL29wdC9zaGFyZWQvbW9kdWxlcy9nY2MvMTEuMS4wLmx1YSIsWyJkZWZhdWx0Il09MCxbImZ1bGxOYW1lIl09ImdjYy8xMS4xLjAiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInNob3J0Il09ImdjYyIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LH0sbXBhdGhBPXsiL29wdC9zaGFyZWQv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bW9kdWxlcyIsIi9ldGMvbG1vZC9tb2R1bGVzIiwiL3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL29wdC9zaGFyZWQvbW9kdWxlczovZXRjL2xtb2QvbW9kdWxlczovdXNyL3NoYXJlL2xtb2QvbG1vZC9tb2R1bGVmaWxlcyIsWyJ2ZXJzaW9uIl09Mix9
+++ export _ModuleTable002_
+++ _ModuleTable_Sz_=2
+++ export _ModuleTable_Sz_
++ '[' 0 = 0 ']'
+++ : -s sh
++ eval
++ cd build-169676672916709/pmix-4.1.1
++ ./configure --prefix=/opt/shared/apps/pmix/4.1.1
++ tee config.out
+: builddir: /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1
+: srcdir: /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1
+
+============================================================================
+== Configuring PMIx
+============================================================================
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking target system type... aarch64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... /opt/shared/apps/gcc/11.1.0/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /opt/shared/apps/gcc/11.1.0/bin/gcc accepts -g... yes
+checking for /opt/shared/apps/gcc/11.1.0/bin/gcc option to enable C11 features... none needed
+checking whether /opt/shared/apps/gcc/11.1.0/bin/gcc understands -c and -o together... yes
+checking dependency style of /opt/shared/apps/gcc/11.1.0/bin/gcc... gcc3
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking directory of source tree... .
+checking directory of absolute source tree... /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1
+checking directory of build tree... /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1
+checking directory of prefix... /opt/shared/apps/pmix/4.1.1
+checking directory of absolute prefix... /opt/shared/apps/pmix/4.1.1
+checking if want wrapper compiler rpath support... yes
+checking if want wrapper compiler runpath support... yes
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking for library containing yywrap... -ll
+checking whether yytext is a pointer... yes
+checking if want dlopen support... yes
+checking if want developer-level compiler pickyness... no
+checking if want memory sanitizers... no
+checking if want developer-level debugging code... no
+checking if want to install project-internal header files... no
+checking if want to install PMIx header files... yes
+checking if tests and examples are to be installed... yes
+checking if want pretty-print stacktrace... yes
+checking if want dstore pthread-based locking... yes
+checking if want ident string... 
+checking if want developer-level timing support... no
+checking if want to disable binaries... yes
+checking if want install Python bindings... no
+checking python... checking for python... /usr/bin/python
+checking for python version... 3.9
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.9/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.9/site-packages
+/usr/bin/python
+checking if want to support dlopen of non-global namespaces... yes
+checking if want pty support... yes
+checking if want build psec/dummy_handshake... no
+installing to directory "/opt/shared/apps/pmix/4.1.1"
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /opt/shared/apps/gcc/11.1.0/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /opt/shared/apps/gcc/11.1.0/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /opt/shared/apps/gcc/11.1.0/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc static flag -static works... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports -c -o file.o... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /opt/shared/apps/gcc/11.1.0/bin/gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+
+*** C compiler and preprocessor
+checking for gcc... (cached) /opt/shared/apps/gcc/11.1.0/bin/gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether /opt/shared/apps/gcc/11.1.0/bin/gcc accepts -g... (cached) yes
+checking for /opt/shared/apps/gcc/11.1.0/bin/gcc option to enable C11 features... (cached) none needed
+checking whether /opt/shared/apps/gcc/11.1.0/bin/gcc understands -c and -o together... (cached) yes
+checking dependency style of /opt/shared/apps/gcc/11.1.0/bin/gcc... (cached) gcc3
+checking for /opt/shared/apps/gcc/11.1.0/bin/gcc options needed to detect all undeclared functions... none needed
+checking how to run the C preprocessor... /opt/shared/apps/gcc/11.1.0/bin/gcc -E
+checking __NetBSD__... no
+checking __FreeBSD__... no
+checking __OpenBSD__... no
+checking __DragonFly__... no
+checking __386BSD__... no
+checking __bsdi__... no
+checking __APPLE__... no
+checking __linux__... yes
+checking __sun__... no
+checking __sun... no
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for netinet/tcp.h... yes
+checking for struct sockaddr_in... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+: pmix builddir: /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1
+: pmix srcdir: /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1
+checking for pmix version... 4.1.1
+checking for pmix standard version... 4.1
+checking if want pmix maintainer support... disabled
+checking for pmix directory prefix... (none)
+checking if want package/brand string... PMIx root@gemini Distribution
+
+============================================================================
+== Compiler and preprocessor tests
+============================================================================
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc requires a flag for C11... no
+: verifying /opt/shared/apps/gcc/11.1.0/bin/gcc supports C11 without a flag
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 _Thread_local... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 atomic variables... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 _Atomic keyword... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 _c11_atomic functions... no
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 _Generic keyword... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 _Static_assert... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 atomic_fetch_xor_explicit... yes
+: no flag required for C11 support
+checking for /opt/shared/apps/gcc/11.1.0/bin/gcc option to add a directory only to the search path for the quote form of include... -iquote
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports __thread... yes
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc  supports C11 _Thread_local... yes
+checking for the C compiler vendor... gnu
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports (-finline-functions)... yes
+CFLAGS result: -DNDEBUG -finline-functions
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports __builtin_expect... 
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports __builtin_prefetch... 
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports __builtin_clz... 
+checking for C optimization flags... -O3 -DNDEBUG -finline-functions
+checking for int8_t... yes
+checking for uint8_t... yes
+checking for int16_t... yes
+checking for uint16_t... yes
+checking for int32_t... yes
+checking for uint32_t... yes
+checking for int64_t... yes
+checking for uint64_t... yes
+checking for __int128... no
+checking for uint128_t... no
+checking for long long... yes
+checking for intptr_t... yes
+checking for uintptr_t... yes
+checking for ptrdiff_t... yes
+checking size of _Bool... 1
+checking size of char... 1
+checking size of short... 2
+checking size of int... 4
+checking size of long... 4
+checking size of long long... 8
+checking size of float... 4
+checking size of double... 8
+checking size of void *... 4
+checking size of size_t... 4
+checking size of ptrdiff_t... 4
+checking size of wchar_t... 4
+checking size of pid_t... 4
+checking alignment of bool... 1
+checking alignment of int8_t... 1
+checking alignment of int16_t... 2
+checking alignment of int32_t... 4
+checking alignment of int64_t... 8
+checking alignment of char... 1
+checking alignment of short... 2
+checking alignment of wchar_t... 4
+checking alignment of int... 4
+checking alignment of long... 4
+checking alignment of long long... 8
+checking alignment of float... 4
+checking alignment of double... 8
+checking alignment of void *... 4
+checking alignment of size_t... 4
+checking for C bool type... no
+checking size of _Bool... (cached) 1
+checking for inline... __inline__
+
+*** Compiler characteristics
+checking for __attribute__... yes
+checking for __attribute__(aligned)... yes
+checking for __attribute__(always_inline)... yes
+checking for __attribute__(cold)... yes
+checking for __attribute__(const)... yes
+checking for __attribute__(deprecated)... yes
+checking for __attribute__(deprecated_argument)... yes
+checking for __attribute__(format)... yes
+checking for __attribute__(format_funcptr)... yes
+checking for __attribute__(hot)... yes
+checking for __attribute__(malloc)... yes
+checking for __attribute__(may_alias)... yes
+checking for __attribute__(no_instrument_function)... yes
+checking for __attribute__(nonnull)... yes
+checking for __attribute__(noreturn)... yes
+checking for __attribute__(noreturn_funcptr)... yes
+checking for __attribute__(packed)... yes
+checking for __attribute__(pure)... yes
+checking for __attribute__(sentinel)... yes
+checking for __attribute__(unused)... yes
+checking for __attribute__(visibility)... yes
+checking for __attribute__(warn_unused_result)... yes
+checking for __attribute__(destructor)... yes
+checking for __attribute__(optnone)... no
+checking for __attribute__(extension)... yes
+checking for compiler familyid... 0
+checking for compiler version... 0
+
+*** Atomics
+checking for 32-bit GCC built-in atomics... no
+checking for x86_64 architecture... no
+checking for atomics style... c11
+
+============================================================================
+== Header file tests
+============================================================================
+checking for arpa/inet.h... yes
+checking for fcntl.h... yes
+checking for ifaddrs.h... yes
+checking for inttypes.h... (cached) yes
+checking for libgen.h... yes
+checking for net/uio.h... no
+checking for netinet/in.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/ioctl.h... yes
+checking for sys/param.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/sockio.h... no
+checking for stdarg.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/un.h... yes
+checking for sys/uio.h... yes
+checking for sys/wait.h... yes
+checking for syslog.h... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking for dirent.h... yes
+checking for crt_externs.h... no
+checking for signal.h... yes
+checking for ioLib.h... no
+checking for sockLib.h... no
+checking for hostLib.h... no
+checking for limits.h... yes
+checking for sys/fcntl.h... yes
+checking for sys/statfs.h... yes
+checking for sys/statvfs.h... yes
+checking for netdb.h... (cached) yes
+checking for ucred.h... no
+checking for zlib.h... yes
+checking for sys/auxv.h... yes
+checking for sys/sysctl.h... yes
+checking for termio.h... yes
+checking for termios.h... yes
+checking for pty.h... yes
+checking for libutil.h... no
+checking for util.h... no
+checking for grp.h... yes
+checking for sys/cdefs.h... yes
+checking for utmp.h... yes
+checking for stropts.h... no
+checking for sys/utsname.h... yes
+checking for sys/mount.h... yes
+checking for sys/sysctl.h... (cached) yes
+checking for net/if.h... yes
+checking for stdbool.h... yes
+checking if <stdbool.h> works... yes
+
+============================================================================
+== Type tests
+============================================================================
+checking for socklen_t... yes
+checking for struct sockaddr_in... (cached) yes
+checking for struct sockaddr_un... yes
+checking for struct sockaddr_in6... yes
+checking for struct sockaddr_storage... yes
+checking whether AF_UNSPEC is declared... yes
+checking whether PF_UNSPEC is declared... yes
+checking whether AF_INET6 is declared... yes
+checking whether PF_INET6 is declared... yes
+checking if SA_RESTART defined in signal.h... yes
+checking for struct sockaddr.sa_len... no
+checking for struct dirent.d_type... yes
+checking for siginfo_t.si_fd... yes
+checking for siginfo_t.si_band... yes
+checking for struct statfs.f_type... yes
+checking for struct statfs.f_fstypename... no
+checking for struct statvfs.f_basetype... no
+checking for struct statvfs.f_fstypename... no
+checking for struct ucred.uid... yes
+checking for struct ucred.cr_uid... no
+checking for struct sockpeercred.uid... no
+checking for pointer diff type... ptrdiff_t (size: 4)
+checking the linker for support for the -fini option... yes
+
+============================================================================
+== Library and Function tests
+============================================================================
+checking for library containing openpty... -lutil
+checking for library containing gethostbyname... none required
+checking for library containing socket... none required
+checking for library containing dirname... none required
+checking for library containing ceil... -lm
+checking for library containing clock_gettime... none required
+checking for asprintf... yes
+checking for snprintf... yes
+checking for vasprintf... yes
+checking for vsnprintf... yes
+checking for strsignal... yes
+checking for socketpair... yes
+checking for strncpy_s... no
+checking for usleep... yes
+checking for statfs... yes
+checking for statvfs... yes
+checking for getpeereid... no
+checking for getpeerucred... no
+checking for strnlen... yes
+checking for posix_fallocate... yes
+checking for tcgetpgrp... yes
+checking for setpgid... yes
+checking for ptsname... yes
+checking for openpty... yes
+checking for setenv... yes
+checking for fork... yes
+checking for execve... yes
+checking for waitpid... yes
+checking for atexit... yes
+checking for htonl define... no
+checking for htonl... yes
+checking whether va_copy is declared... yes
+checking whether __va_copy is declared... yes
+checking whether __func__ is declared... yes
+
+============================================================================
+== System-specific tests
+============================================================================
+checking whether byte ordering is bigendian... no
+checking if C compiler and POSIX threads work as is... no
+checking if C compiler and POSIX threads work with -Kthread... no
+checking if C compiler and POSIX threads work with -kthread... no
+checking if C compiler and POSIX threads work with -pthread... yes
+checking for PTHREAD_MUTEX_ERRORCHECK_NP... yes
+checking for PTHREAD_MUTEX_ERRORCHECK... yes
+checking for working POSIX threads package... yes
+checking if threads have different pids (pthreads on linux)... no
+checking whether ln -s works... yes
+checking for grep that handles long lines and -e... (cached) /usr/bin/grep
+checking for egrep... (cached) /usr/bin/grep -E
+checking for pthread_setaffinity_np... yes
+
+============================================================================
+== Symbol visibility feature
+============================================================================
+checking if /opt/shared/apps/gcc/11.1.0/bin/gcc supports -fvisibility=hidden... yes
+checking whether to enable symbol visibility... yes (via -fvisibility=hidden)
+
+============================================================================
+== Event libraries
+============================================================================
+checking --with-libevent value... simple ok (unspecified)
+checking --with-libevent-libdir value... simple ok (unspecified)
+checking looking for header event.h in standard paths... 
+checking for event.h... yes
+checking looking for library without search path... 
+checking for library containing event_config_new... -levent_core
+checking if libevent threads enabled... yes
+checking for libevent pthreads support... yes
+checking if libevent version is 2.0.21 or greater... yes
+checking will libevent support be built... yes
+
+============================================================================
+== HWLOC
+============================================================================
+checking looking for header hwloc.h in standard paths... 
+checking for hwloc.h... yes
+checking looking for library without search path... 
+checking for library containing hwloc_topology_init... -lhwloc
+checking if hwloc version is in 2.5.0-2.7.0 range... no
+checking if hwloc version is 1.5 or greater... yes
+checking if hwloc version is 1.8 or greater... yes
+checking if hwloc version is 2.0 or greater... yes
+
+============================================================================
+== JANSSON
+============================================================================
+checking Jansson support available... no
+
+============================================================================
+== CURL
+============================================================================
+checking libcurl support available... no
+
+============================================================================
+== Dstore Locking
+============================================================================
+checking for struct flock.l_type... yes
+checking pthread_process_shared... yes
+checking for pthread_rwlockattr_setkind_np... yes
+checking for pthread_rwlockattr_setpshared... yes
+checking for pthread_mutexattr_setpshared... yes
+
+============================================================================
+== Modular Component Architecture (MCA) setup
+============================================================================
+checking for default value of mca_base_component_show_load_errors... disabled by default
+checking for subdir args...  '--prefix=/opt/shared/apps/pmix/4.1.1' 'CC=/opt/shared/apps/gcc/11.1.0/bin/gcc'
+checking which components should be disabled... 
+checking which components should be run-time loadable... prm pnet-sshot pcompress-zlib 
+checking which components should be static... default
+
+*** Configuring MCA
+checking for frameworks... common, bfrops, gds, pcompress, pdl, pfexec, pgpu, pif, pinstalldirs, plog, pmdl, pnet, preg, prm, psec, psensor, pshmem, psquash, pstat, pstrg, ptl
+
++++ Configuring MCA framework common
+checking for no configure components in framework common... 
+checking for m4 configure components in framework common... dstore, sse
+
+--- MCA component common:dstore (m4 configuration macro)
+checking for MCA component common:dstore compile mode... static
+checking if MCA component common:dstore can compile... yes
+
+--- MCA component common:sse (m4 configuration macro)
+checking for MCA component common:sse compile mode... static
+checking if MCA component common:sse can compile... no
+
++++ Configuring MCA framework bfrops
+checking for no configure components in framework bfrops... v12, v20, v21, v3, v4, v41
+checking for m4 configure components in framework bfrops... 
+
+--- MCA component bfrops:v12 (no configuration)
+checking for MCA component bfrops:v12 compile mode... static
+checking if MCA component bfrops:v12 can compile... yes
+
+--- MCA component bfrops:v20 (no configuration)
+checking for MCA component bfrops:v20 compile mode... static
+checking if MCA component bfrops:v20 can compile... yes
+
+--- MCA component bfrops:v21 (no configuration)
+checking for MCA component bfrops:v21 compile mode... static
+checking if MCA component bfrops:v21 can compile... yes
+
+--- MCA component bfrops:v3 (no configuration)
+checking for MCA component bfrops:v3 compile mode... static
+checking if MCA component bfrops:v3 can compile... yes
+
+--- MCA component bfrops:v4 (no configuration)
+checking for MCA component bfrops:v4 compile mode... static
+checking if MCA component bfrops:v4 can compile... yes
+
+--- MCA component bfrops:v41 (no configuration)
+checking for MCA component bfrops:v41 compile mode... static
+checking if MCA component bfrops:v41 can compile... yes
+
++++ Configuring MCA framework gds
+checking for no configure components in framework gds... hash
+checking for m4 configure components in framework gds... ds12, ds21
+
+--- MCA component gds:hash (no configuration)
+checking for MCA component gds:hash compile mode... static
+checking if MCA component gds:hash can compile... yes
+
+--- MCA component gds:ds12 (m4 configuration macro)
+checking for MCA component gds:ds12 compile mode... static
+checking if MCA component gds:ds12 can compile... yes
+
+--- MCA component gds:ds21 (m4 configuration macro)
+checking for MCA component gds:ds21 compile mode... static
+checking if MCA component gds:ds21 can compile... yes
+
++++ Configuring MCA framework pcompress
+checking for no configure components in framework pcompress... 
+checking for m4 configure components in framework pcompress... zlib
+
+--- MCA component pcompress:zlib (m4 configuration macro)
+checking for MCA component pcompress:zlib compile mode... dso
+checking for zlib in... (default search paths)
+checking looking for header zlib.h in standard paths... 
+checking for zlib.h... yes
+checking looking for library without search path... 
+checking for library containing deflate... -lz
+checking will zlib support be built... yes
+checking if MCA component pcompress:zlib can compile... yes
+
++++ Configuring MCA framework pdl
+checking for no configure components in framework pdl... 
+checking for m4 configure components in framework pdl... pdlopen, plibltdl
+
+--- MCA component pdl:pdlopen (m4 configuration macro, priority 80)
+checking for MCA component pdl:pdlopen compile mode... static
+checking looking for header dlfcn.h in standard paths... 
+checking for dlfcn.h... yes
+checking looking for library without search path... 
+checking for library containing dlopen... -ldl
+checking if MCA component pdl:pdlopen can compile... yes
+
+--- MCA component pdl:plibltdl (m4 configuration macro, priority 50)
+checking for MCA component pdl:plibltdl compile mode... static
+checking --with-plibltdl value... simple ok (unspecified)
+checking --with-plibltdl-libdir value... simple ok (unspecified)
+checking for libltdl dir... compiler default
+checking for libltdl library dir... linker default
+checking looking for header ltdl.h in standard paths... 
+checking for ltdl.h... yes
+checking looking for library without search path... 
+checking for library containing lt_dlopen... -lltdl
+checking for lt_dladvise_init... yes
+checking if MCA component pdl:plibltdl can compile... no
+
++++ Configuring MCA framework pfexec
+checking for no configure components in framework pfexec... 
+checking for m4 configure components in framework pfexec... linux
+
+--- MCA component pfexec:linux (m4 configuration macro)
+checking for MCA component pfexec:linux compile mode... static
+checking for fork... (cached) yes
+checking if MCA component pfexec:linux can compile... yes
+
++++ Configuring MCA framework pgpu
+checking for no configure components in framework pgpu... 
+checking for m4 configure components in framework pgpu... amd, intel, nvd
+
+--- MCA component pgpu:amd (m4 configuration macro)
+checking for MCA component pgpu:amd compile mode... static
+checking if MCA component pgpu:amd can compile... no
+
+--- MCA component pgpu:intel (m4 configuration macro)
+checking for MCA component pgpu:intel compile mode... static
+checking if MCA component pgpu:intel can compile... no
+
+--- MCA component pgpu:nvd (m4 configuration macro)
+checking for MCA component pgpu:nvd compile mode... static
+checking if MCA component pgpu:nvd can compile... no
+
++++ Configuring MCA framework pif
+checking for no configure components in framework pif... 
+checking for m4 configure components in framework pif... bsdx_ipv4, bsdx_ipv6, linux_ipv6, posix_ipv4, solaris_ipv6
+
+--- MCA component pif:bsdx_ipv4 (m4 configuration macro)
+checking for MCA component pif:bsdx_ipv4 compile mode... static
+checking struct sockaddr... yes (cached)
+checking NetBSD, FreeBSD, OpenBSD, or DragonFly... no
+checking if MCA component pif:bsdx_ipv4 can compile... no
+
+--- MCA component pif:bsdx_ipv6 (m4 configuration macro)
+checking for MCA component pif:bsdx_ipv6 compile mode... static
+checking struct sockaddr... yes (cached)
+checking some flavor of BSD... no
+checking if MCA component pif:bsdx_ipv6 can compile... no
+
+--- MCA component pif:linux_ipv6 (m4 configuration macro)
+checking for MCA component pif:linux_ipv6 compile mode... static
+checking if we are on Linux with TCP... yes
+checking if MCA component pif:linux_ipv6 can compile... yes
+
+--- MCA component pif:posix_ipv4 (m4 configuration macro)
+checking for MCA component pif:posix_ipv4 compile mode... static
+checking struct sockaddr... yes (cached)
+checking not NetBSD, FreeBSD, OpenBSD, or DragonFly... yes
+checking for struct ifreq.ifr_hwaddr... yes
+checking for struct ifreq.ifr_mtu... yes
+checking if MCA component pif:posix_ipv4 can compile... yes
+
+--- MCA component pif:solaris_ipv6 (m4 configuration macro)
+checking for MCA component pif:solaris_ipv6 compile mode... static
+checking if MCA component pif:solaris_ipv6 can compile... no
+
++++ Configuring MCA framework pinstalldirs
+checking for no configure components in framework pinstalldirs... 
+checking for m4 configure components in framework pinstalldirs... config, env
+
+--- MCA component pinstalldirs:env (m4 configuration macro, priority 10)
+checking for MCA component pinstalldirs:env compile mode... static
+checking if MCA component pinstalldirs:env can compile... yes
+
+--- MCA component pinstalldirs:config (m4 configuration macro, priority 0)
+checking for MCA component pinstalldirs:config compile mode... static
+checking if MCA component pinstalldirs:config can compile... yes
+
++++ Configuring MCA framework plog
+checking for no configure components in framework plog... default, stdfd
+checking for m4 configure components in framework plog... syslog
+
+--- MCA component plog:default (no configuration)
+checking for MCA component plog:default compile mode... static
+checking if MCA component plog:default can compile... yes
+
+--- MCA component plog:stdfd (no configuration)
+checking for MCA component plog:stdfd compile mode... static
+checking if MCA component plog:stdfd can compile... yes
+
+--- MCA component plog:syslog (m4 configuration macro)
+checking for MCA component plog:syslog compile mode... static
+checking for syslog.h... (cached) yes
+checking if MCA component plog:syslog can compile... yes
+
++++ Configuring MCA framework pmdl
+checking for no configure components in framework pmdl... ompi, oshmem
+checking for m4 configure components in framework pmdl... 
+
+--- MCA component pmdl:ompi (no configuration)
+checking for MCA component pmdl:ompi compile mode... static
+checking if MCA component pmdl:ompi can compile... yes
+
+--- MCA component pmdl:oshmem (no configuration)
+checking for MCA component pmdl:oshmem compile mode... static
+checking if MCA component pmdl:oshmem can compile... yes
+
++++ Configuring MCA framework pnet
+checking for no configure components in framework pnet... 
+checking for m4 configure components in framework pnet... nvd, opa, simptest, tcp, usnic
+
+--- MCA component pnet:nvd (m4 configuration macro)
+checking for MCA component pnet:nvd compile mode... static
+checking if MCA component pnet:nvd can compile... no
+
+--- MCA component pnet:opa (m4 configuration macro)
+checking for MCA component pnet:opa compile mode... static
+checking if MCA component pnet:opa can compile... yes
+
+--- MCA component pnet:simptest (m4 configuration macro)
+checking for MCA component pnet:simptest compile mode... static
+checking if MCA component pnet:simptest can compile... no
+
+--- MCA component pnet:tcp (m4 configuration macro)
+checking for MCA component pnet:tcp compile mode... static
+checking if MCA component pnet:tcp can compile... no
+
+--- MCA component pnet:usnic (m4 configuration macro)
+checking for MCA component pnet:usnic compile mode... static
+checking if MCA component pnet:usnic can compile... no
+
++++ Configuring MCA framework preg
+checking for no configure components in framework preg... compress, native, raw
+checking for m4 configure components in framework preg... 
+
+--- MCA component preg:compress (no configuration)
+checking for MCA component preg:compress compile mode... static
+checking if MCA component preg:compress can compile... yes
+
+--- MCA component preg:native (no configuration)
+checking for MCA component preg:native compile mode... static
+checking if MCA component preg:native can compile... yes
+
+--- MCA component preg:raw (no configuration)
+checking for MCA component preg:raw compile mode... static
+checking if MCA component preg:raw can compile... yes
+
++++ Configuring MCA framework prm
+checking for no configure components in framework prm... default
+checking for m4 configure components in framework prm... hpesmf, slurm, tm
+
+--- MCA component prm:default (no configuration)
+checking for MCA component prm:default compile mode... dso
+checking if MCA component prm:default can compile... yes
+
+--- MCA component prm:hpesmf (m4 configuration macro)
+checking for MCA component prm:hpesmf compile mode... dso
+checking if MCA component prm:hpesmf can compile... no
+
+--- MCA component prm:slurm (m4 configuration macro)
+checking for MCA component prm:slurm compile mode... dso
+checking for fork... (cached) yes
+checking for execve... (cached) yes
+checking for setpgid... (cached) yes
+checking for ALPS support cle level unknown... checking for CRAY_ALPSLLI... no
+checking for CRAY_ALPSUTIL... no
+checking for CRAY_ALPS... no
+checking for CRAY_WLM_DETECT... no
+pmix_check_cray_alps_happy = no
+checking if MCA component prm:slurm can compile... yes
+
+--- MCA component prm:tm (m4 configuration macro)
+checking for MCA component prm:tm compile mode... dso
+checking --with-tm value... simple ok (unspecified)
+checking for pbs-config... not found
+checking looking for header tm.h in standard paths... 
+checking for tm.h... no
+checking if MCA component prm:tm can compile... no
+
++++ Configuring MCA framework psec
+checking for no configure components in framework psec... dummy_handshake, native, none
+checking for m4 configure components in framework psec... munge
+
+--- MCA component psec:dummy_handshake (no configuration)
+checking for MCA component psec:dummy_handshake compile mode... static
+checking if MCA component psec:dummy_handshake can compile... no
+
+--- MCA component psec:native (no configuration)
+checking for MCA component psec:native compile mode... static
+checking if MCA component psec:native can compile... yes
+
+--- MCA component psec:none (no configuration)
+checking for MCA component psec:none compile mode... static
+checking if MCA component psec:none can compile... yes
+
+--- MCA component psec:munge (m4 configuration macro)
+checking for MCA component psec:munge compile mode... static
+checking will munge support be built... no
+checking if MCA component psec:munge can compile... no
+
++++ Configuring MCA framework psensor
+checking for no configure components in framework psensor... file, heartbeat
+checking for m4 configure components in framework psensor... 
+
+--- MCA component psensor:file (no configuration)
+checking for MCA component psensor:file compile mode... static
+checking if MCA component psensor:file can compile... yes
+
+--- MCA component psensor:heartbeat (no configuration)
+checking for MCA component psensor:heartbeat compile mode... static
+checking if MCA component psensor:heartbeat can compile... yes
+
++++ Configuring MCA framework pshmem
+checking for no configure components in framework pshmem... mmap
+checking for m4 configure components in framework pshmem... 
+
+--- MCA component pshmem:mmap (no configuration)
+checking for MCA component pshmem:mmap compile mode... static
+checking if MCA component pshmem:mmap can compile... yes
+
++++ Configuring MCA framework psquash
+checking for no configure components in framework psquash... flex128, native
+checking for m4 configure components in framework psquash... 
+
+--- MCA component psquash:flex128 (no configuration)
+checking for MCA component psquash:flex128 compile mode... static
+checking if MCA component psquash:flex128 can compile... yes
+
+--- MCA component psquash:native (no configuration)
+checking for MCA component psquash:native compile mode... static
+checking if MCA component psquash:native can compile... yes
+
++++ Configuring MCA framework pstat
+checking for no configure components in framework pstat... 
+checking for m4 configure components in framework pstat... linux, test
+
+--- MCA component pstat:linux (m4 configuration macro, priority 60)
+checking for MCA component pstat:linux compile mode... static
+checking if MCA component pstat:linux can compile... no
+
+--- MCA component pstat:test (m4 configuration macro, priority 10)
+checking for MCA component pstat:test compile mode... static
+checking if MCA component pstat:test can compile... yes
+
++++ Configuring MCA framework pstrg
+checking for no configure components in framework pstrg... vfs
+checking for m4 configure components in framework pstrg... lustre
+
+--- MCA component pstrg:vfs (no configuration)
+checking for MCA component pstrg:vfs compile mode... static
+checking if MCA component pstrg:vfs can compile... yes
+
+--- MCA component pstrg:lustre (m4 configuration macro)
+checking for MCA component pstrg:lustre compile mode... static
+checking --with-lustre value... simple ok (unspecified)
+checking looking for lustre libraries and header files in... ()
+checking looking for header lustre/lustreapi.h in standard paths... 
+checking for lustre/lustreapi.h... no
+checking if MCA component pstrg:lustre can compile... no
+
++++ Configuring MCA framework ptl
+checking for no configure components in framework ptl... client, server, tool
+checking for m4 configure components in framework ptl... 
+
+--- MCA component ptl:client (no configuration)
+checking for MCA component ptl:client compile mode... static
+checking if MCA component ptl:client can compile... yes
+
+--- MCA component ptl:server (no configuration)
+checking for MCA component ptl:server compile mode... static
+checking if MCA component ptl:server can compile... yes
+
+--- MCA component ptl:tool (no configuration)
+checking for MCA component ptl:tool compile mode... static
+checking if MCA component ptl:tool can compile... yes
+
+*** Set path-related compiler flags
+
+*** Wrapper compiler final setup
+checking for perl... /usr/bin/perl
+: creating ./config.lt
+config.lt: creating libtool
+checking if linker supports RPATH... yes (-Wl,-rpath -Wl,LIBDIR)
+checking if linker supports RUNPATH... yes (-Wl,--enable-new-dtags)
+checking for PMIX CPPFLAGS... 
+checking for PMIX CFLAGS... -pthread
+checking for PMIX CFLAGS_PREFIX... 
+checking for PMIX LDFLAGS...   -Wl,-rpath -Wl,@{libdir} -Wl,--enable-new-dtags
+checking for PMIX pkg-config LDFLAGS...   -Wl,-rpath -Wl,${libdir} -Wl,--enable-new-dtags
+checking for PMIX LIBS... -levent_core -levent_pthreads -lhwloc
+
+*** Final output
+
+============================================================================
+== Final compiler flags
+============================================================================
+checking final CPPFLAGS... -iquote/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1 -iquote/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src -I/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include
+checking final CFLAGS... -O3 -DNDEBUG -finline-functions -pthread -fvisibility=hidden
+checking final LDFLAGS... 
+checking final LIBS... -levent_core -levent_pthreads -lhwloc -lm -lutil -ldl
+checking if libtool needs -no-undefined flag to build shared libraries... no
+
+============================================================================
+== Configuration complete
+============================================================================
+checking that generated files are newer than configure... done
+: creating ./config.status
+config.status: creating include/pmix_version.h
+config.status: creating src/mca/common/Makefile
+config.status: creating src/mca/common/dstore/Makefile
+config.status: creating src/mca/common/sse/Makefile
+config.status: creating src/mca/bfrops/Makefile
+config.status: creating src/mca/bfrops/v12/Makefile
+config.status: creating src/mca/bfrops/v20/Makefile
+config.status: creating src/mca/bfrops/v21/Makefile
+config.status: creating src/mca/bfrops/v3/Makefile
+config.status: creating src/mca/bfrops/v4/Makefile
+config.status: creating src/mca/bfrops/v41/Makefile
+config.status: creating src/mca/gds/Makefile
+config.status: creating src/mca/gds/hash/Makefile
+config.status: creating src/mca/gds/ds12/Makefile
+config.status: creating src/mca/gds/ds21/Makefile
+config.status: creating src/mca/pcompress/Makefile
+config.status: creating src/mca/pcompress/zlib/Makefile
+config.status: creating src/mca/pdl/Makefile
+config.status: creating src/mca/pdl/pdlopen/Makefile
+config.status: creating src/mca/pdl/plibltdl/Makefile
+config.status: creating src/mca/pfexec/Makefile
+config.status: creating src/mca/pfexec/linux/Makefile
+config.status: creating src/mca/pgpu/Makefile
+config.status: creating src/mca/pgpu/amd/Makefile
+config.status: creating src/mca/pgpu/intel/Makefile
+config.status: creating src/mca/pgpu/nvd/Makefile
+config.status: creating src/mca/pif/Makefile
+config.status: creating src/mca/pif/bsdx_ipv4/Makefile
+config.status: creating src/mca/pif/bsdx_ipv6/Makefile
+config.status: creating src/mca/pif/linux_ipv6/Makefile
+config.status: creating src/mca/pif/posix_ipv4/Makefile
+config.status: creating src/mca/pif/solaris_ipv6/Makefile
+config.status: creating src/mca/pinstalldirs/Makefile
+config.status: creating src/mca/pinstalldirs/env/Makefile
+config.status: creating src/mca/pinstalldirs/config/Makefile
+config.status: creating src/mca/pinstalldirs/config/pinstall_dirs.h
+config.status: creating src/mca/plog/Makefile
+config.status: creating src/mca/plog/default/Makefile
+config.status: creating src/mca/plog/stdfd/Makefile
+config.status: creating src/mca/plog/syslog/Makefile
+config.status: creating src/mca/pmdl/Makefile
+config.status: creating src/mca/pmdl/ompi/Makefile
+config.status: creating src/mca/pmdl/oshmem/Makefile
+config.status: creating src/mca/pnet/Makefile
+config.status: creating src/mca/pnet/nvd/Makefile
+config.status: creating src/mca/pnet/opa/Makefile
+config.status: creating src/mca/pnet/simptest/Makefile
+config.status: creating src/mca/pnet/tcp/Makefile
+config.status: creating src/mca/pnet/usnic/Makefile
+config.status: creating src/mca/preg/Makefile
+config.status: creating src/mca/preg/compress/Makefile
+config.status: creating src/mca/preg/native/Makefile
+config.status: creating src/mca/preg/raw/Makefile
+config.status: creating src/mca/prm/Makefile
+config.status: creating src/mca/prm/default/Makefile
+config.status: creating src/mca/prm/hpesmf/Makefile
+config.status: creating src/mca/prm/slurm/Makefile
+config.status: creating src/mca/prm/tm/Makefile
+config.status: creating src/mca/psec/Makefile
+config.status: creating src/mca/psec/dummy_handshake/Makefile
+config.status: creating src/mca/psec/native/Makefile
+config.status: creating src/mca/psec/none/Makefile
+config.status: creating src/mca/psec/munge/Makefile
+config.status: creating src/mca/psensor/Makefile
+config.status: creating src/mca/psensor/file/Makefile
+config.status: creating src/mca/psensor/heartbeat/Makefile
+config.status: creating src/mca/pshmem/Makefile
+config.status: creating src/mca/pshmem/mmap/Makefile
+config.status: creating src/mca/psquash/Makefile
+config.status: creating src/mca/psquash/flex128/Makefile
+config.status: creating src/mca/psquash/native/Makefile
+config.status: creating src/mca/pstat/Makefile
+config.status: creating src/mca/pstat/linux/Makefile
+config.status: creating src/mca/pstat/test/Makefile
+config.status: creating src/mca/pstrg/Makefile
+config.status: creating src/mca/pstrg/vfs/Makefile
+config.status: creating src/mca/pstrg/lustre/Makefile
+config.status: creating src/mca/ptl/Makefile
+config.status: creating src/mca/ptl/client/Makefile
+config.status: creating src/mca/ptl/server/Makefile
+config.status: creating src/mca/ptl/tool/Makefile
+config.status: creating test/run_tests00.pl
+config.status: creating test/run_tests01.pl
+config.status: creating test/run_tests02.pl
+config.status: creating test/run_tests03.pl
+config.status: creating test/run_tests04.pl
+config.status: creating test/run_tests05.pl
+config.status: creating test/run_tests06.pl
+config.status: creating test/run_tests07.pl
+config.status: creating test/run_tests08.pl
+config.status: creating test/run_tests09.pl
+config.status: creating test/run_tests10.pl
+config.status: creating test/run_tests11.pl
+config.status: creating test/run_tests12.pl
+config.status: creating test/run_tests13.pl
+config.status: creating Makefile
+config.status: creating bindings/Makefile
+config.status: creating bindings/python/Makefile
+config.status: creating config/Makefile
+config.status: creating etc/Makefile
+config.status: creating include/Makefile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/util/keyval/Makefile
+config.status: creating src/util/showhelp/Makefile
+config.status: creating src/mca/base/Makefile
+config.status: creating src/tools/pevent/Makefile
+config.status: creating src/tools/pmix_info/Makefile
+config.status: creating src/tools/plookup/Makefile
+config.status: creating src/tools/pps/Makefile
+config.status: creating src/tools/pattrs/Makefile
+config.status: creating src/tools/pquery/Makefile
+config.status: creating src/tools/wrapper/Makefile
+config.status: creating src/tools/wrapper/pmixcc-wrapper-data.txt
+config.status: creating contrib/Makefile
+config.status: creating examples/Makefile
+config.status: creating test/Makefile
+config.status: creating test/test_v2/Makefile
+config.status: creating test/python/Makefile
+config.status: creating test/simple/Makefile
+config.status: creating maint/pmix.pc
+config.status: creating src/include/pmix_config.h
+config.status: creating include/pmix_common.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+PMIx configuration:
+-----------------------
+Version: 4.1.1
+PMIx Standard Version: 4.1
+Debug build: no
+Platform file: (none)
+
+Required Packages
+-----------------------
+HWLOC: yes (Standard locations)
+Libevent: yes (Standard locations)
+ 
+External Packages
+-----------------------
+Curl: no
+Jansson: no
+Lustre: no
+ZLIB: yes (Standard locations)
+ 
+GPUs
+-----------------------
+AMD: no
+Intel: no
+NVIDIA: no
+ 
+Transports
+-----------------------
+Cisco usNIC: no
+NVIDIA: no
+OmniPath: yes
+Simptest: no
+TCP: no
+ 
+Resource Managers
+-----------------------
+Cray Alps: no
+Slurm: yes
+Torque: no
+ 
++ make -j4 all
++ tee make.out
+Making all in config
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/config'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/config'
+Making all in contrib
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/contrib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/contrib'
+Making all in include
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+make  all-am
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+Making all in src
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+Making all in include
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make  all-am
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+  CC       pmix_globals.lo
+  CCLD     libpmixglobal.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+Making all in util/keyval
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/keyval'
+  CC       keyval_lex.lo
+  CCLD     libpmixutilkeyval.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/keyval'
+Making all in util/showhelp
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/showhelp'
+  CC       showhelp_lex.lo
+  CCLD     libpmixutilshowhelp.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/showhelp'
+Making all in mca/base
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/base'
+  CC       pmix_mca_base_close.lo
+  CC       pmix_mca_base_cmd_line.lo
+  CC       pmix_mca_base_component_compare.lo
+  CC       pmix_mca_base_component_find.lo
+  CC       pmix_mca_base_component_repository.lo
+  CC       pmix_mca_base_components_open.lo
+  CC       pmix_mca_base_components_close.lo
+  CC       pmix_mca_base_components_select.lo
+  CC       pmix_mca_base_list.lo
+  CC       pmix_mca_base_open.lo
+  CC       pmix_mca_base_var.lo
+  CC       pmix_mca_base_var_enum.lo
+  CC       pmix_mca_base_var_group.lo
+  CC       pmix_mca_base_parse_paramfile.lo
+  CC       pmix_mca_base_components_register.lo
+  CC       pmix_mca_base_framework.lo
+  CC       pmix_mca_base_alias.lo
+  CCLD     libpmix_mca_base.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/base'
+Making all in mca/common
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common'
+Making all in mca/bfrops
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops'
+  CC       base/bfrop_base_frame.lo
+  CC       base/bfrop_base_fns.lo
+  CC       base/bfrop_base_select.lo
+  CC       base/bfrop_base_copy.lo
+  CC       base/bfrop_base_pack.lo
+  CC       base/bfrop_base_print.lo
+  CC       base/bfrop_base_unpack.lo
+base/bfrop_base_print.c: In function ‘pmix_bfrops_base_print_devtype’:
+base/bfrop_base_print.c:2190:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 2190 |                    (uint64_t) src);
+      |                    ^
+  CC       base/bfrop_base_stubs.lo
+  CCLD     libmca_bfrops.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops'
+Making all in mca/gds
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds'
+  CC       base/gds_base_frame.lo
+  CC       base/gds_base_select.lo
+  CC       base/gds_base_fns.lo
+  CCLD     libmca_gds.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds'
+Making all in mca/pcompress
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress'
+  CC       base/pcompress_base_frame.lo
+  CC       base/pcompress_base_select.lo
+  CCLD     libmca_pcompress.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress'
+Making all in mca/pdl
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl'
+  CC       base/pdl_base_open.lo
+  CC       base/pdl_base_close.lo
+  CC       base/pdl_base_select.lo
+  CC       base/pdl_base_fns.lo
+  CCLD     libmca_pdl.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl'
+Making all in mca/pfexec
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec'
+  CC       base/pfexec_base_frame.lo
+  CC       base/pfexec_base_select.lo
+  CC       base/pfexec_base_default_fns.lo
+  CCLD     libmca_pfexec.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec'
+Making all in mca/pgpu
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pgpu'
+  CC       base/pgpu_base_frame.lo
+  CC       base/pgpu_base_select.lo
+  CC       base/pgpu_base_fns.lo
+  CCLD     libmca_pgpu.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pgpu'
+Making all in mca/pif
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif'
+  CC       base/pif_base_components.lo
+  CCLD     libmca_pif.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif'
+Making all in mca/pinstalldirs
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs'
+  CC       base/pinstalldirs_base_components.lo
+  CC       base/pinstalldirs_base_expand.lo
+  CCLD     libmca_pinstalldirs.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs'
+Making all in mca/plog
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog'
+  CC       base/plog_base_frame.lo
+  CC       base/plog_base_select.lo
+  CC       base/plog_base_stubs.lo
+  CCLD     libmca_plog.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog'
+Making all in mca/pmdl
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl'
+  CC       base/pmdl_base_frame.lo
+  CC       base/pmdl_base_select.lo
+  CC       base/pmdl_base_stubs.lo
+  CCLD     libmca_pmdl.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl'
+Making all in mca/pnet
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet'
+  CC       base/pnet_base_frame.lo
+  CC       base/pnet_base_select.lo
+  CC       base/pnet_base_fns.lo
+  CCLD     libmca_pnet.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet'
+Making all in mca/preg
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg'
+  CC       base/preg_base_frame.lo
+  CC       base/preg_base_select.lo
+  CC       base/preg_base_stubs.lo
+  CCLD     libmca_preg.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg'
+Making all in mca/prm
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm'
+  CC       base/prm_base_frame.lo
+  CC       base/prm_base_select.lo
+  CC       base/prm_base_stubs.lo
+  CCLD     libmca_prm.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm'
+Making all in mca/psec
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec'
+  CC       base/psec_base_frame.lo
+  CC       base/psec_base_select.lo
+  CC       base/psec_base_fns.lo
+  CCLD     libmca_psec.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec'
+Making all in mca/psensor
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor'
+  CC       base/psensor_base_frame.lo
+  CC       base/psensor_base_select.lo
+  CC       base/psensor_base_stubs.lo
+  CCLD     libmca_psensor.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor'
+Making all in mca/pshmem
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem'
+  CC       base/pshmem_base_frame.lo
+  CC       base/pshmem_base_select.lo
+  CCLD     libmca_pshmem.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem'
+Making all in mca/psquash
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash'
+  CC       base/psquash_base_frame.lo
+  CC       base/psquash_base_select.lo
+  CCLD     libmca_psquash.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash'
+Making all in mca/pstat
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat'
+  CC       base/pstat_base_select.lo
+  CC       base/pstat_base_open.lo
+  CCLD     libmca_pstat.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat'
+Making all in mca/pstrg
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg'
+  CC       base/pstrg_base_frame.lo
+  CC       base/pstrg_base_select.lo
+  CC       base/pstrg_base_stubs.lo
+  CCLD     libmca_pstrg.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg'
+Making all in mca/ptl
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl'
+  CC       base/ptl_base_frame.lo
+  CC       base/ptl_base_select.lo
+  CC       base/ptl_base_sendrecv.lo
+  CC       base/ptl_base_listener.lo
+  CC       base/ptl_base_stubs.lo
+  CC       base/ptl_base_connect.lo
+  CC       base/ptl_base_fns.lo
+  CC       base/ptl_base_connection_hdlr.lo
+In file included from base/ptl_base_connect.c:46:
+/usr/include/arm-linux-gnueabihf/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+In file included from base/ptl_base_fns.c:37:
+/usr/include/arm-linux-gnueabihf/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+  CCLD     libmca_ptl.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl'
+Making all in mca/common/dstore
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common/dstore'
+  CC       dstore_base.lo
+  CC       dstore_segment.lo
+  CCLD     libmca_common_dstore.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common/dstore'
+Making all in mca/bfrops/v12
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v12'
+  CC       bfrop_v12_component.lo
+  CC       bfrop_v12.lo
+  CC       pack.lo
+  CC       unpack.lo
+  CC       copy.lo
+  CC       print.lo
+  CCLD     libmca_bfrops_v12.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v12'
+Making all in mca/bfrops/v20
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v20'
+  CC       bfrop_pmix20_component.lo
+  CC       bfrop_pmix20.lo
+  CC       copy.lo
+  CC       pack.lo
+  CC       print.lo
+  CC       unpack.lo
+  CCLD     libmca_bfrops_v20.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v20'
+Making all in mca/bfrops/v21
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v21'
+  CC       bfrop_pmix21_component.lo
+  CC       bfrop_pmix21.lo
+  CCLD     libmca_bfrops_v21.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v21'
+Making all in mca/bfrops/v3
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v3'
+  CC       bfrop_pmix3_component.lo
+  CC       bfrop_pmix3.lo
+  CCLD     libmca_bfrops_v3.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v3'
+Making all in mca/bfrops/v4
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v4'
+  CC       bfrop_pmix4_component.lo
+  CC       bfrop_pmix4.lo
+  CCLD     libmca_bfrops_v4.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v4'
+Making all in mca/bfrops/v41
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v41'
+  CC       bfrop_pmix41_component.lo
+  CC       bfrop_pmix41.lo
+  CCLD     libmca_bfrops_v41.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v41'
+Making all in mca/gds/hash
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/hash'
+  CC       gds_hash_component.lo
+  CC       gds_hash.lo
+  CC       process_arrays.lo
+  CC       gds_utils.lo
+  CC       gds_fetch.lo
+  CCLD     libmca_gds_hash.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/hash'
+Making all in mca/gds/ds12
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds12'
+  CC       gds_ds12_base.lo
+  CC       gds_ds12_lock.lo
+  CC       gds_ds12_component.lo
+  CC       gds_ds12_file.lo
+  CC       gds_ds20_file.lo
+  CC       gds_ds12_lock_pthread.lo
+  CCLD     libmca_gds_ds12.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds12'
+Making all in mca/gds/ds21
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds21'
+  CC       gds_ds21_base.lo
+  CC       gds_ds21_lock.lo
+  CC       gds_ds21_lock_pthread.lo
+  CC       gds_ds21_component.lo
+  CC       gds_ds21_file.lo
+  CCLD     libmca_gds_ds21.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds21'
+Making all in mca/pdl/pdlopen
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl/pdlopen'
+  CC       pdl_pdlopen_component.lo
+  CC       pdl_pdlopen_module.lo
+  CCLD     libmca_pdl_pdlopen.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl/pdlopen'
+Making all in mca/pfexec/linux
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec/linux'
+  CC       pfexec_linux_component.lo
+  CC       pfexec_linux.lo
+  CCLD     libmca_pfexec_linux.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec/linux'
+Making all in mca/pif/linux_ipv6
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/linux_ipv6'
+  CC       pif_linux_ipv6.lo
+  CCLD     libmca_pif_linux_ipv6.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/linux_ipv6'
+Making all in mca/pif/posix_ipv4
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/posix_ipv4'
+  CC       pif_posix.lo
+  CCLD     libmca_pif_posix_ipv4.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/posix_ipv4'
+Making all in mca/pinstalldirs/env
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/env'
+  CC       pmix_pinstalldirs_env.lo
+  CCLD     libmca_pinstalldirs_env.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/env'
+Making all in mca/pinstalldirs/config
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/config'
+  CC       pmix_pinstalldirs_config.lo
+  CCLD     libmca_pinstalldirs_config.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/config'
+Making all in mca/plog/default
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/default'
+  CC       plog_default.lo
+  CC       plog_default_component.lo
+  CCLD     libmca_plog_default.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/default'
+Making all in mca/plog/stdfd
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/stdfd'
+  CC       plog_stdfd.lo
+  CC       plog_stdfd_component.lo
+  CCLD     libmca_plog_stdfd.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/stdfd'
+Making all in mca/plog/syslog
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/syslog'
+  CC       plog_syslog.lo
+  CC       plog_syslog_component.lo
+  CCLD     libmca_plog_syslog.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/syslog'
+Making all in mca/pmdl/ompi
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/ompi'
+  CC       pmdl_ompi_component.lo
+  CC       pmdl_ompi.lo
+  CCLD     libmca_pmdl_ompi.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/ompi'
+Making all in mca/pmdl/oshmem
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/oshmem'
+  CC       pmdl_oshmem_component.lo
+  CC       pmdl_oshmem.lo
+  CCLD     libmca_pmdl_oshmem.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/oshmem'
+Making all in mca/pnet/opa
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet/opa'
+  CC       pnet_opa_component.lo
+  CC       pnet_opa.lo
+  CCLD     libmca_pnet_opa.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet/opa'
+Making all in mca/preg/compress
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/compress'
+  CC       preg_compress_component.lo
+  CC       preg_compress.lo
+  CCLD     libmca_preg_compress.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/compress'
+Making all in mca/preg/native
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/native'
+  CC       preg_native_component.lo
+  CC       preg_native.lo
+  CCLD     libmca_preg_native.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/native'
+Making all in mca/preg/raw
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/raw'
+  CC       preg_raw_component.lo
+  CC       preg_raw.lo
+  CCLD     libmca_preg_raw.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/raw'
+Making all in mca/psec/native
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/native'
+  CC       psec_native_component.lo
+  CC       psec_native.lo
+  CCLD     libmca_psec_native.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/native'
+Making all in mca/psec/none
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/none'
+  CC       psec_none_component.lo
+  CC       psec_none.lo
+  CCLD     libmca_psec_none.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/none'
+Making all in mca/psensor/file
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/file'
+  CC       psensor_file.lo
+  CC       psensor_file_component.lo
+  CCLD     libmca_psensor_file.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/file'
+Making all in mca/psensor/heartbeat
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/heartbeat'
+  CC       psensor_heartbeat.lo
+  CC       psensor_heartbeat_component.lo
+  CCLD     libmca_psensor_heartbeat.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/heartbeat'
+Making all in mca/pshmem/mmap
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem/mmap'
+  CC       pshmem_mmap.lo
+  CC       pshmem_mmap_component.lo
+  CCLD     libmca_pshmem_mmap.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem/mmap'
+Making all in mca/psquash/flex128
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/flex128'
+  CC       psquash_flex128_component.lo
+  CC       psquash_flex128.lo
+  CCLD     libmca_psquash_flex128.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/flex128'
+Making all in mca/psquash/native
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/native'
+  CC       psquash_native_component.lo
+  CC       psquash_native.lo
+  CCLD     libmca_psquash_native.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/native'
+Making all in mca/pstat/test
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat/test'
+  CC       pstat_test_component.lo
+  CC       pstat_test.lo
+  CCLD     libmca_pstat_test.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat/test'
+Making all in mca/pstrg/vfs
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg/vfs'
+  CC       pstrg_vfs_component.lo
+  CC       pstrg_vfs.lo
+  CCLD     libmca_pstrg_vfs.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg/vfs'
+Making all in mca/ptl/client
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/client'
+  CC       ptl_client_component.lo
+  CC       ptl_client.lo
+In file included from ptl_client.c:52:
+/usr/include/arm-linux-gnueabihf/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+  CCLD     libmca_ptl_client.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/client'
+Making all in mca/ptl/server
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/server'
+  CC       ptl_server_component.lo
+  CC       ptl_server.lo
+  CCLD     libmca_ptl_server.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/server'
+Making all in mca/ptl/tool
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/tool'
+  CC       ptl_tool_component.lo
+  CC       ptl_tool.lo
+  CCLD     libmca_ptl_tool.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/tool'
+Making all in .
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+  CC       threads/thread.lo
+  CC       threads/mutex.lo
+  CC       threads/wait_sync.lo
+  CC       class/pmix_bitmap.lo
+  CC       class/pmix_object.lo
+  CC       class/pmix_list.lo
+  CC       class/pmix_pointer_array.lo
+  CC       class/pmix_hash_table.lo
+  CC       class/pmix_hotel.lo
+  CC       class/pmix_ring_buffer.lo
+  CC       class/pmix_value_array.lo
+  CC       event/pmix_event_notification.lo
+  CC       event/pmix_event_registration.lo
+  CC       hwloc/pmix_hwloc.lo
+  CC       hwloc/pmix_hwloc_datatype.lo
+hwloc/pmix_hwloc.c: In function ‘pmix_hwloc_setup_topology’:
+hwloc/pmix_hwloc.c:292:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  292 |                                     (void *) addr, size, 0);
+      |                                     ^
+hwloc/pmix_hwloc.c: In function ‘popsize’:
+hwloc/pmix_hwloc.c:1435:16: warning: conversion from ‘long long unsigned int’ to ‘size_t’ {aka ‘unsigned int’} changes value from ‘18446744073709551615’ to ‘4294967295’ [-Woverflow]
+ 1435 |         return UINT64_MAX;
+      |                ^~~~~~~~~~
+hwloc/pmix_hwloc.c:1439:16: warning: conversion from ‘long long unsigned int’ to ‘size_t’ {aka ‘unsigned int’} changes value from ‘18446744073709551615’ to ‘4294967295’ [-Woverflow]
+ 1439 |         return UINT64_MAX;
+      |                ^~~~~~~~~~
+hwloc/pmix_hwloc.c: In function ‘find_hole’:
+hwloc/pmix_hwloc.c:1662:47: warning: passing argument 3 of ‘use_hole’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1662 |                     return use_hole(0, begin, addrp, size);
+      |                                               ^~~~~
+      |                                               |
+      |                                               size_t * {aka unsigned int *}
+hwloc/pmix_hwloc.c:1610:85: note: expected ‘long unsigned int *’ but argument is of type ‘size_t *’ {aka ‘unsigned int *’}
+ 1610 | static int use_hole(unsigned long holebegin, unsigned long holesize, unsigned long *addrp,
+      |                                                                      ~~~~~~~~~~~~~~~^~~~~
+hwloc/pmix_hwloc.c:1670:67: warning: passing argument 3 of ‘use_hole’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1670 |                         return use_hole(prevend, begin - prevend, addrp, size);
+      |                                                                   ^~~~~
+      |                                                                   |
+      |                                                                   size_t * {aka unsigned int *}
+hwloc/pmix_hwloc.c:1610:85: note: expected ‘long unsigned int *’ but argument is of type ‘size_t *’ {aka ‘unsigned int *’}
+ 1610 | static int use_hole(unsigned long holebegin, unsigned long holesize, unsigned long *addrp,
+      |                                                                      ~~~~~~~~~~~~~~~^~~~~
+hwloc/pmix_hwloc.c:1677:67: warning: passing argument 3 of ‘use_hole’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1677 |                         return use_hole(prevend, begin - prevend, addrp, size);
+      |                                                                   ^~~~~
+      |                                                                   |
+      |                                                                   size_t * {aka unsigned int *}
+hwloc/pmix_hwloc.c:1610:85: note: expected ‘long unsigned int *’ but argument is of type ‘size_t *’ {aka ‘unsigned int *’}
+ 1610 | static int use_hole(unsigned long holebegin, unsigned long holesize, unsigned long *addrp,
+      |                                                                      ~~~~~~~~~~~~~~~^~~~~
+hwloc/pmix_hwloc.c:1728:52: warning: passing argument 3 of ‘use_hole’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1728 |         return use_hole(biggestbegin, biggestsize, addrp, size);
+      |                                                    ^~~~~
+      |                                                    |
+      |                                                    size_t * {aka unsigned int *}
+hwloc/pmix_hwloc.c:1610:85: note: expected ‘long unsigned int *’ but argument is of type ‘size_t *’ {aka ‘unsigned int *’}
+ 1610 | static int use_hole(unsigned long holebegin, unsigned long holesize, unsigned long *addrp,
+      |                                                                      ~~~~~~~~~~~~~~~^~~~~
+  CC       util/alfg.lo
+  CC       util/argv.lo
+  CC       util/cmd_line.lo
+  CC       util/error.lo
+  CC       util/printf.lo
+  CC       util/output.lo
+  CC       util/pmix_environ.lo
+  CC       util/crc.lo
+  CC       util/fd.lo
+  CC       util/timings.lo
+  CC       util/os_dirpath.lo
+  CC       util/os_path.lo
+  CC       util/basename.lo
+  CC       util/keyval_parse.lo
+  CC       util/show_help.lo
+  CC       util/path.lo
+  CC       util/getid.lo
+  CC       util/hash.lo
+  CC       util/name_fns.lo
+  CC       util/net.lo
+  CC       util/pif.lo
+  CC       util/parse_options.lo
+  CC       util/context_fns.lo
+  CC       util/pmix_pty.lo
+  CC       util/few.lo
+  CC       util/string_copy.lo
+  CC       util/pmix_getcwd.lo
+  CC       client/pmix_client.lo
+  CC       client/pmix_client_fence.lo
+  CC       client/pmix_client_get.lo
+  CC       client/pmix_client_pub.lo
+  CC       client/pmix_client_spawn.lo
+client/pmix_client_get.c: In function ‘PMIx_Get_nb’:
+client/pmix_client_get.c:350:22: warning: ‘_getfn_fastpath’ reading 512 bytes from a region of size 12 [-Wstringop-overread]
+  350 |                 rc = _getfn_fastpath(&pmix_globals.myid, PMIX_APPNUM, NULL, 0, &ival);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+client/pmix_client_get.c:350:22: note: referencing argument 2 of type ‘const char *’
+client/pmix_client_get.c:676:22: note: in a call to function ‘_getfn_fastpath’
+  676 | static pmix_status_t _getfn_fastpath(const pmix_proc_t *proc, const pmix_key_t key,
+      |                      ^~~~~~~~~~~~~~~
+client/pmix_client_get.c:371:22: warning: ‘_getfn_fastpath’ reading 512 bytes from a region of size 12 [-Wstringop-overread]
+  371 |                 rc = _getfn_fastpath(&pmix_globals.myid, PMIX_APPNUM, NULL, 0, &ival);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+client/pmix_client_get.c:371:22: note: referencing argument 2 of type ‘const char *’
+client/pmix_client_get.c:676:22: note: in a call to function ‘_getfn_fastpath’
+  676 | static pmix_status_t _getfn_fastpath(const pmix_proc_t *proc, const pmix_key_t key,
+      |                      ^~~~~~~~~~~~~~~
+  CC       client/pmix_client_connect.lo
+  CC       client/pmix_client_group.lo
+  CC       client/pmix_client_fabric.lo
+  CC       client/pmix_client_topology.lo
+  CC       server/pmix_server.lo
+  CC       server/pmix_server_ops.lo
+  CC       server/pmix_server_get.lo
+  CC       runtime/pmix_finalize.lo
+  CC       runtime/pmix_init.lo
+  CC       runtime/pmix_params.lo
+  CC       runtime/pmix_progress_threads.lo
+  CC       tool/pmix_tool.lo
+  CC       tool/pmix_tool_ops.lo
+  CC       common/pmix_query.lo
+  CC       common/pmix_strings.lo
+  CC       common/pmix_log.lo
+  CC       common/pmix_control.lo
+  CC       common/pmix_data.lo
+  CC       common/pmix_security.lo
+  CC       common/pmix_iof.lo
+  CC       common/pmix_attributes.lo
+  CCLD     libpmix.la
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+Making all in mca/pcompress/zlib
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib'
+  CC       compress_zlib_component.lo
+  CC       compress_zlib.lo
+  CCLD     mca_pcompress_zlib.la
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib'
+Making all in mca/prm/default
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default'
+  CC       prm_default_component.lo
+  CC       prm_default.lo
+  CCLD     mca_prm_default.la
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default'
+Making all in mca/prm/slurm
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm'
+  CC       prm_slurm_component.lo
+  CC       prm_slurm.lo
+  CCLD     mca_prm_slurm.la
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm'
+Making all in tools/pevent
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pevent'
+  CC       pevent.o
+  CCLD     pevent
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pevent'
+Making all in tools/pmix_info
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pmix_info'
+  CC       pmix_info.o
+  CC       support.o
+  CCLD     pmix_info
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pmix_info'
+Making all in tools/plookup
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/plookup'
+  CC       plookup.o
+  CCLD     plookup
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/plookup'
+Making all in tools/pps
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pps'
+  CC       pps.o
+  CCLD     pps
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pps'
+Making all in tools/pattrs
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pattrs'
+  CC       pattrs.o
+  CCLD     pattrs
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pattrs'
+Making all in tools/pquery
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pquery'
+  CC       pquery.o
+  CCLD     pquery
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pquery'
+Making all in tools/wrapper
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/wrapper'
+  CC       pmixcc.o
+  CCLD     pmixcc
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/wrapper'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+Making all in etc
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/etc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/etc'
+Making all in bindings
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+Making all in python
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings/python'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings/python'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+Making all in .
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1'
+Making all in test/test_v2
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test/test_v2'
+  CC       pmix_test.o
+  CC       test_common.o
+  CC       cli_stages.o
+  CC       test_server.o
+  CC       server_callbacks.o
+  CC       base64_enc_dec.o
+  CC       test_init_fin.o
+  CC       test_clientapp_funcs.o
+server_callbacks.c: In function ‘spawn_fn’:
+server_callbacks.c:323:5: warning: ‘PMIx_server_register_nspace’ reading 256 bytes from a region of size 7 [-Wstringop-overread]
+  323 |     PMIx_server_register_nspace("foobar", napps, NULL, 0, release_cb, (void *) cb);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+server_callbacks.c:323:5: note: referencing argument 1 of type ‘const char *’
+In file included from cli_stages.h:19,
+                 from server_callbacks.h:17,
+                 from server_callbacks.c:19:
+../../include/pmix_server.h:657:27: note: in a call to function ‘PMIx_server_register_nspace’
+  657 | PMIX_EXPORT pmix_status_t PMIx_server_register_nspace(const pmix_nspace_t nspace, int nlocalprocs,
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       test_helloworld.o
+  CC       test_get_basic.o
+  CC       test_get_peers.o
+test_get_basic.c: In function ‘main’:
+test_get_basic.c:52:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 14 [-Wstringop-overread]
+   52 |     pmixt_validate_predefined(&job_proc, PMIX_JOB_SIZE, val, PMIX_UINT32, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:52:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:57:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 15 [-Wstringop-overread]
+   57 |     pmixt_validate_predefined(&job_proc, PMIX_UNIV_SIZE, val, PMIX_UINT32, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:57:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:62:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 16 [-Wstringop-overread]
+   62 |     pmixt_validate_predefined(&this_proc, PMIX_LOCAL_SIZE, val, PMIX_UINT32, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:62:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:67:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 11 [-Wstringop-overread]
+   67 |     pmixt_validate_predefined(&this_proc, PMIX_LOCAL_RANK, val, PMIX_UINT16, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:67:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:72:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 12 [-Wstringop-overread]
+   72 |     pmixt_validate_predefined(&this_proc, PMIX_NODEID, val, PMIX_UINT32, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:72:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:77:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 12 [-Wstringop-overread]
+   77 |     pmixt_validate_predefined(&job_proc, PMIX_LOCAL_PEERS, val, PMIX_STRING, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:77:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:82:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 11 [-Wstringop-overread]
+   82 |     pmixt_validate_predefined(&this_proc, PMIX_HOSTNAME, val, PMIX_STRING, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:82:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:88:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 10 [-Wstringop-overread]
+   88 |     pmixt_validate_predefined(&job_proc, PMIX_RANK, val, PMIX_PROC_RANK, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_basic.c:88:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_basic.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c: In function ‘main’:
+test_get_peers.c:49:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 14 [-Wstringop-overread]
+   49 |     pmixt_validate_predefined(&job_proc, PMIX_JOB_SIZE, val, PMIX_UINT32, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:49:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_peers.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:54:5: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 12 [-Wstringop-overread]
+   54 |     pmixt_validate_predefined(&job_proc, PMIX_LOCAL_PEERS, val, PMIX_STRING, &v_params);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:54:5: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_peers.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:63:9: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 11 [-Wstringop-overread]
+   63 |         pmixt_validate_predefined(&peer_proc, PMIX_LOCAL_RANK, val, PMIX_UINT16, &v_params);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:63:9: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_peers.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:68:9: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 12 [-Wstringop-overread]
+   68 |         pmixt_validate_predefined(&peer_proc, PMIX_NODEID, val, PMIX_UINT32, &v_params);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:68:9: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_peers.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:73:9: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 11 [-Wstringop-overread]
+   73 |         pmixt_validate_predefined(&peer_proc, PMIX_NODE_RANK, val, PMIX_UINT16, &v_params);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:73:9: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_peers.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:78:9: warning: ‘pmixt_validate_predefined’ reading 512 bytes from a region of size 11 [-Wstringop-overread]
+   78 |         pmixt_validate_predefined(&peer_proc, PMIX_HOSTNAME, val, PMIX_STRING, &v_params);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_get_peers.c:78:9: note: referencing argument 2 of type ‘const char *’
+In file included from test_get_peers.c:16:
+test_common.h:242:6: note: in a call to function ‘pmixt_validate_predefined’
+  242 | void pmixt_validate_predefined(pmix_proc_t *myproc, const pmix_key_t key, pmix_value_t *value,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       test_fence_basic.o
+  CC       test_fence_wildcard.o
+  CC       test_fence_partial.o
+  CCLD     test_init_fin
+  CCLD     test_helloworld
+  CCLD     test_get_basic
+  CCLD     test_get_peers
+  CCLD     test_fence_basic
+  CCLD     test_fence_wildcard
+  CCLD     test_fence_partial
+  CCLD     pmix_test
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test/test_v2'
+Making all in test
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+  CC       pmix_test.o
+  CC       test_common.o
+  CC       cli_stages.o
+  CC       server_callbacks.o
+  CC       test_server.o
+  CC       utils.o
+  CC       pmix_client.o
+  CC       test_fence.o
+  CC       test_publish.o
+  CC       test_spawn.o
+  CC       test_cd.o
+  CC       test_resolve_peers.o
+  CC       test_error.o
+  CC       test_replace.o
+  CC       test_internal.o
+  CC       pmix_regex.o
+  CCLD     pmix_test
+  CCLD     pmix_regex
+  CCLD     pmix_client
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+Making all in examples
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/examples'
+  CC       client.o
+  CC       examples.o
+  CC       client2.o
+  CC       dmodex.o
+  CC       dynamic.o
+  CC       fault.o
+  CC       pub.o
+  CC       pubi.o
+  CC       tool.o
+  CC       debugger.o
+  CC       debuggerd.o
+  CC       alloc.o
+  CC       jctrl.o
+  CC       group.o
+  CC       asyncgroup.o
+  CCLD     client
+  CCLD     client2
+  CCLD     dmodex
+  CCLD     dynamic
+  CCLD     fault
+  CCLD     pub
+  CCLD     pubi
+  CCLD     tool
+  CCLD     debugger
+  CCLD     debuggerd
+  CCLD     alloc
+  CCLD     jctrl
+  CCLD     group
+  CCLD     asyncgroup
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/examples'
++ make install
++ tee install.out
+Making install in config
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/config'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/config'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/config'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/config'
+Making install in contrib
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/contrib'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/contrib'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 pmix-valgrind.supp '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/contrib'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/contrib'
+Making install in include
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/include'
+ /usr/bin/install -c -m 644 pmix.h pmix_server.h pmix_tool.h pmix_extend.h pmix_deprecated.h '/opt/shared/apps/pmix/4.1.1/include'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/include'
+ /usr/bin/install -c -m 644 pmix_common.h pmix_version.h '/opt/shared/apps/pmix/4.1.1/include'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/include'
+Making install in src
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+Making install in include
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make  install-am
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make[4]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/include'
+Making install in util/keyval
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/keyval'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/keyval'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/keyval'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/keyval'
+Making install in util/showhelp
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/showhelp'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/showhelp'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/showhelp'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/util/showhelp'
+Making install in mca/base
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/base'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/base'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pmix-mca-base.txt help-pmix-mca-var.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/base'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/base'
+Making install in mca/common
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common'
+Making install in mca/bfrops
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops'
+Making install in mca/gds
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds'
+Making install in mca/pcompress
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 base/help-pcompress.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress'
+Making install in mca/pdl
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl'
+Making install in mca/pfexec
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 base/help-pfexec-base.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec'
+Making install in mca/pgpu
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pgpu'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pgpu'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pgpu'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pgpu'
+Making install in mca/pif
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif'
+Making install in mca/pinstalldirs
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs'
+Making install in mca/plog
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 base/help-pmix-plog.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog'
+Making install in mca/pmdl
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 base/help-pmdl.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl'
+Making install in mca/pnet
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet'
+Making install in mca/preg
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg'
+Making install in mca/prm
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 base/help-prm.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm'
+Making install in mca/psec
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec'
+Making install in mca/psensor
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor'
+Making install in mca/pshmem
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem'
+Making install in mca/psquash
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash'
+Making install in mca/pstat
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat'
+Making install in mca/pstrg
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg'
+Making install in mca/ptl
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 base/help-ptl-base.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl'
+Making install in mca/common/dstore
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common/dstore'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common/dstore'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common/dstore'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/common/dstore'
+Making install in mca/bfrops/v12
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v12'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v12'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v12'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v12'
+Making install in mca/bfrops/v20
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v20'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v20'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v20'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v20'
+Making install in mca/bfrops/v21
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v21'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v21'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v21'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v21'
+Making install in mca/bfrops/v3
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v3'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v3'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v3'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v3'
+Making install in mca/bfrops/v4
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v4'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v4'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v4'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v4'
+Making install in mca/bfrops/v41
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v41'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v41'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v41'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/bfrops/v41'
+Making install in mca/gds/hash
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/hash'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/hash'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/hash'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/hash'
+Making install in mca/gds/ds12
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds12'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds12'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds12'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds12'
+Making install in mca/gds/ds21
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds21'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds21'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds21'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/gds/ds21'
+Making install in mca/pdl/pdlopen
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl/pdlopen'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl/pdlopen'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl/pdlopen'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pdl/pdlopen'
+Making install in mca/pfexec/linux
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec/linux'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec/linux'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pfexec-linux.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec/linux'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pfexec/linux'
+Making install in mca/pif/linux_ipv6
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/linux_ipv6'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/linux_ipv6'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/linux_ipv6'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/linux_ipv6'
+Making install in mca/pif/posix_ipv4
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/posix_ipv4'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/posix_ipv4'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/posix_ipv4'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pif/posix_ipv4'
+Making install in mca/pinstalldirs/env
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/env'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/env'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/env'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/env'
+Making install in mca/pinstalldirs/config
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/config'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/config'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/config'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pinstalldirs/config'
+Making install in mca/plog/default
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/default'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/default'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/default'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/default'
+Making install in mca/plog/stdfd
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/stdfd'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/stdfd'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/stdfd'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/stdfd'
+Making install in mca/plog/syslog
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/syslog'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/syslog'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/syslog'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/plog/syslog'
+Making install in mca/pmdl/ompi
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/ompi'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/ompi'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/ompi'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/ompi'
+Making install in mca/pmdl/oshmem
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/oshmem'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/oshmem'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/oshmem'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pmdl/oshmem'
+Making install in mca/pnet/opa
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet/opa'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet/opa'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet/opa'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pnet/opa'
+Making install in mca/preg/compress
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/compress'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/compress'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/compress'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/compress'
+Making install in mca/preg/native
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/native'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/native'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/native'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/native'
+Making install in mca/preg/raw
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/raw'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/raw'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/raw'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/preg/raw'
+Making install in mca/psec/native
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/native'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/native'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/native'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/native'
+Making install in mca/psec/none
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/none'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/none'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/none'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psec/none'
+Making install in mca/psensor/file
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/file'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/file'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pmix-psensor-file.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/file'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/file'
+Making install in mca/psensor/heartbeat
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/heartbeat'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/heartbeat'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pmix-psensor-heartbeat.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/heartbeat'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psensor/heartbeat'
+Making install in mca/pshmem/mmap
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem/mmap'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem/mmap'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem/mmap'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pshmem/mmap'
+Making install in mca/psquash/flex128
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/flex128'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/flex128'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/flex128'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/flex128'
+Making install in mca/psquash/native
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/native'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/native'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/native'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/psquash/native'
+Making install in mca/pstat/test
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat/test'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat/test'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstat/test'
+Making install in mca/pstrg/vfs
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg/vfs'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg/vfs'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg/vfs'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pstrg/vfs'
+Making install in mca/ptl/client
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/client'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/client'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/client'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/client'
+Making install in mca/ptl/server
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/server'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/server'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/server'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/server'
+Making install in mca/ptl/tool
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/tool'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/tool'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/tool'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/ptl/tool'
+Making install in .
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libpmix.la '/opt/shared/apps/pmix/4.1.1/lib'
+libtool: install: /usr/bin/install -c .libs/libpmix.so.2.5.1 /opt/shared/apps/pmix/4.1.1/lib/libpmix.so.2.5.1
+libtool: install: (cd /opt/shared/apps/pmix/4.1.1/lib && { ln -s -f libpmix.so.2.5.1 libpmix.so.2 || { rm -f libpmix.so.2 && ln -s libpmix.so.2.5.1 libpmix.so.2; }; })
+libtool: install: (cd /opt/shared/apps/pmix/4.1.1/lib && { ln -s -f libpmix.so.2.5.1 libpmix.so || { rm -f libpmix.so && ln -s libpmix.so.2.5.1 libpmix.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpmix.lai /opt/shared/apps/pmix/4.1.1/lib/libpmix.la
+libtool: finish: PATH="/opt/shared/apps/gcc/11.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/shared/apps/pmix/4.1.1/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/shared/apps/pmix/4.1.1/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 hwloc/help-ploc.txt util/help-pmix-util.txt server/help-pmix-server.txt runtime/help-pmix-runtime.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+Making install in mca/pcompress/zlib
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/lib/pmix'
+ /bin/bash ../../../../libtool   --mode=install /usr/bin/install -c   mca_pcompress_zlib.la '/opt/shared/apps/pmix/4.1.1/lib/pmix'
+libtool: warning: relinking 'mca_pcompress_zlib.la'
+libtool: install: (cd /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib; /bin/bash "/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/libtool"  --silent --tag CC --mode=relink /opt/shared/apps/gcc/11.1.0/bin/gcc -O3 -DNDEBUG -finline-functions -pthread -fvisibility=hidden -module -avoid-version -o mca_pcompress_zlib.la -rpath /opt/shared/apps/pmix/4.1.1/lib/pmix compress_zlib_component.lo compress_zlib.lo -lz ../../../../src/libpmix.la -levent_core -levent_pthreads -lhwloc -lm -lutil -ldl )
+libtool: install: /usr/bin/install -c .libs/mca_pcompress_zlib.soT /opt/shared/apps/pmix/4.1.1/lib/pmix/mca_pcompress_zlib.so
+libtool: install: /usr/bin/install -c .libs/mca_pcompress_zlib.lai /opt/shared/apps/pmix/4.1.1/lib/pmix/mca_pcompress_zlib.la
+libtool: finish: PATH="/opt/shared/apps/gcc/11.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/shared/apps/pmix/4.1.1/lib/pmix
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/shared/apps/pmix/4.1.1/lib/pmix
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/pcompress/zlib'
+Making install in mca/prm/default
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/lib/pmix'
+ /bin/bash ../../../../libtool   --mode=install /usr/bin/install -c   mca_prm_default.la '/opt/shared/apps/pmix/4.1.1/lib/pmix'
+libtool: warning: relinking 'mca_prm_default.la'
+libtool: install: (cd /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default; /bin/bash "/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/libtool"  --silent --tag CC --mode=relink /opt/shared/apps/gcc/11.1.0/bin/gcc -O3 -DNDEBUG -finline-functions -pthread -fvisibility=hidden -module -avoid-version -o mca_prm_default.la -rpath /opt/shared/apps/pmix/4.1.1/lib/pmix prm_default_component.lo prm_default.lo ../../../../src/libpmix.la -levent_core -levent_pthreads -lhwloc -lm -lutil -ldl )
+libtool: install: /usr/bin/install -c .libs/mca_prm_default.soT /opt/shared/apps/pmix/4.1.1/lib/pmix/mca_prm_default.so
+libtool: install: /usr/bin/install -c .libs/mca_prm_default.lai /opt/shared/apps/pmix/4.1.1/lib/pmix/mca_prm_default.la
+libtool: finish: PATH="/opt/shared/apps/gcc/11.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/shared/apps/pmix/4.1.1/lib/pmix
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/shared/apps/pmix/4.1.1/lib/pmix
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/default'
+Making install in mca/prm/slurm
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/lib/pmix'
+ /bin/bash ../../../../libtool   --mode=install /usr/bin/install -c   mca_prm_slurm.la '/opt/shared/apps/pmix/4.1.1/lib/pmix'
+libtool: warning: relinking 'mca_prm_slurm.la'
+libtool: install: (cd /opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm; /bin/bash "/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/libtool"  --silent --tag CC --mode=relink /opt/shared/apps/gcc/11.1.0/bin/gcc -O3 -DNDEBUG -finline-functions -pthread -fvisibility=hidden -module -avoid-version -o mca_prm_slurm.la -rpath /opt/shared/apps/pmix/4.1.1/lib/pmix prm_slurm_component.lo prm_slurm.lo ../../../../src/libpmix.la -levent_core -levent_pthreads -lhwloc -lm -lutil -ldl )
+libtool: install: /usr/bin/install -c .libs/mca_prm_slurm.soT /opt/shared/apps/pmix/4.1.1/lib/pmix/mca_prm_slurm.so
+libtool: install: /usr/bin/install -c .libs/mca_prm_slurm.lai /opt/shared/apps/pmix/4.1.1/lib/pmix/mca_prm_slurm.la
+libtool: finish: PATH="/opt/shared/apps/gcc/11.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /opt/shared/apps/pmix/4.1.1/lib/pmix
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/shared/apps/pmix/4.1.1/lib/pmix
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/mca/prm/slurm'
+Making install in tools/pevent
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pevent'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pevent'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c pevent '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/pevent /opt/shared/apps/pmix/4.1.1/bin/pevent
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pevent.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pevent'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pevent'
+Making install in tools/pmix_info
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pmix_info'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pmix_info'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c pmix_info '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/pmix_info /opt/shared/apps/pmix/4.1.1/bin/pmix_info
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pmix-info.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pmix_info'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pmix_info'
+Making install in tools/plookup
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/plookup'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/plookup'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c plookup '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/plookup /opt/shared/apps/pmix/4.1.1/bin/plookup
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-plookup.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/plookup'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/plookup'
+Making install in tools/pps
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pps'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pps'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c pps '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/pps /opt/shared/apps/pmix/4.1.1/bin/pps
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pps.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pps'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pps'
+Making install in tools/pattrs
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pattrs'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pattrs'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c pattrs '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/pattrs /opt/shared/apps/pmix/4.1.1/bin/pattrs
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pattrs.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pattrs'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pattrs'
+Making install in tools/pquery
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pquery'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pquery'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c pquery '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/pquery /opt/shared/apps/pmix/4.1.1/bin/pquery
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pquery.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pquery'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/pquery'
+Making install in tools/wrapper
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/wrapper'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/wrapper'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/bin'
+  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c pmixcc '/opt/shared/apps/pmix/4.1.1/bin'
+libtool: install: /usr/bin/install -c .libs/pmixcc /opt/shared/apps/pmix/4.1.1/bin/pmixcc
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 help-pmixcc.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 pmixcc-wrapper-data.txt '/opt/shared/apps/pmix/4.1.1/share/pmix'
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/wrapper'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src/tools/wrapper'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/src'
+Making install in etc
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/etc'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/etc'
+make[2]: Nothing to be done for 'install-exec-am'.
+/usr/bin/mkdir -p /opt/shared/apps/pmix/4.1.1/etc
+******************************* WARNING ************************************
+*** Not installing new pmix-mca-params.conf over existing file in:
+***   /opt/shared/apps/pmix/4.1.1/etc/pmix-mca-params.conf
+******************************* WARNING ************************************
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/etc'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/etc'
+Making install in bindings
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+Making install in python
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings/python'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings/python'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings/python'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings/python'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/bindings'
+Making install in .
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/install -c -m 644 contrib/pmix-valgrind.supp '/opt/shared/apps/pmix/4.1.1/share/pmix'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/share/man/man1'
+ /usr/bin/install -c -m 644 man/man1/pattrs.1 man/man1/pevent.1 man/man1/plookup.1 man/man1/pmixcc.1 man/man1/pps.1 man/man1/pquery.1 '/opt/shared/apps/pmix/4.1.1/share/man/man1'
+ /usr/bin/mkdir -p '/opt/shared/apps/pmix/4.1.1/lib/pkgconfig'
+ /usr/bin/install -c -m 644 maint/pmix.pc '/opt/shared/apps/pmix/4.1.1/lib/pkgconfig'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1'
+Making install in test/test_v2
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test/test_v2'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test/test_v2'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test/test_v2'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test/test_v2'
+Making install in test
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[3]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/test'
+Making install in examples
+make[1]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/examples'
+make[2]: Entering directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/examples'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/examples'
+make[1]: Leaving directory '/opt/shared/compile/pmix/4.1.4/build-169676672916709/pmix-4.1.1/examples'
++ cd ..
++ cp -r pmix-4.1.1/aclocal.m4 pmix-4.1.1/AUTHORS pmix-4.1.1/autogen.pl pmix-4.1.1/bindings pmix-4.1.1/config pmix-4.1.1/config.log pmix-4.1.1/config.lt pmix-4.1.1/config.out pmix-4.1.1/config.status pmix-4.1.1/configure pmix-4.1.1/configure.ac pmix-4.1.1/contrib pmix-4.1.1/etc pmix-4.1.1/examples pmix-4.1.1/EXCEPTIONS pmix-4.1.1/HACKING pmix-4.1.1/include pmix-4.1.1/INSTALL pmix-4.1.1/install.out pmix-4.1.1/libtool pmix-4.1.1/LICENSE pmix-4.1.1/maint pmix-4.1.1/Makefile pmix-4.1.1/Makefile.am pmix-4.1.1/Makefile.in pmix-4.1.1/make.out pmix-4.1.1/man pmix-4.1.1/NEWS pmix-4.1.1/README pmix-4.1.1/src pmix-4.1.1/test pmix-4.1.1/VERSION /opt/shared/apps/pmix/4.1.1/.
++ cd ..
++ rm -rf build-169676672916709
++ chown -R pi: /opt/shared/apps/pmix/4.1.1
++ sudo mkdir -p /opt/shared/modules/pmix
++ echo 'Creating Lmod module file for pmix 4.1.1'
+Creating Lmod module file for pmix 4.1.1
++ tee /opt/shared/modules/pmix/4.1.1.lua
+help([[
+This module loads pmix 4.1.1 installed in /opt/shared/apps/pmix/4.1.1.
+]])
+
+local version = "4.1.1"
+local base    = "/opt/shared/apps/pmix/4.1.1"
+
+load("gcc/11.1.0"))
+
+-- environment variables
+setenv("PMIX_ROOT", base)
+setenv("PMIX_PREFIX", base)
+setenv("PMIX_BIN_PATH", pathJoin(base, "bin"))
+setenv("PMIX_LIB_PATH", pathJoin(base, "lib"))
+
+-- add binaries to path
+prepend_path("PATH", pathJoin(base, "bin"))
+prepend_path("MANPATH", pathJoin(base, "share/man"))
+prepend_path("LD_LIBRARY_PATH", pathJoin(base, "lib"))
+prepend_path("LIBRARY_PATH", pathJoin(base, "lib"))
+prepend_path("C_INCLUDE_PATH", pathJoin(base, "include"))
+
+family("pmix")
++ echo 'pmix 4.1.1 installation and module setup complete.'
+pmix 4.1.1 installation and module setup complete.

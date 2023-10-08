@@ -19,15 +19,13 @@ tar -xf ${STORE_DIR}/openmpi-$OPENMPI_VERSION.tar.gz -C $build_dir/.
 
 # Compile and install OpenMPI
 module load pmix/4.1.1
+module load gcc/11.1.0
 cd $build_dir/openmpi-$OPENMPI_VERSION
   ./configure --prefix=$INSTALL_DIR \
 	      --with-slurm \
 	      --host=arm-linux-gnueabi \
 	      --enable-mpirun-prefix-by-default \
 	      --with-pmix=${PMIX_ROOT} 2>&1 | tee config.out
-
-
-#	      --build=$(build-aux/config.guess) \
 
   make -j$(nproc) all 2>&1 | tee make.out
   sudo make install 2>&1 | tee install.out
@@ -51,6 +49,7 @@ local version = "$OPENMPI_VERSION"
 local base    = "$INSTALL_DIR"
 
 load("pmix/4.1.1")
+load("gcc/11.1.0")
 
 -- environment variables
 setenv("MPI_HOME", base)

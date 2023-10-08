@@ -19,6 +19,7 @@ mkdir $build_dir
 tar -xf ${STORE_DIR}/${NAME}-${VERSION}.tar.gz -C $build_dir/.
 
 # Compile and install 
+module load gcc/11.1.0
 cd $build_dir/${NAME}-${VERSION}
   ./configure --prefix=$INSTALL_DIR 2>&1 | tee config.out
   make -j4 all 2>&1 | tee make.out
@@ -43,6 +44,8 @@ This module loads ${NAME} $VERSION installed in $INSTALL_DIR.
 
 local version = "$VERSION"
 local base    = "$INSTALL_DIR"
+
+load("gcc/11.1.0")
 
 -- environment variables
 setenv("PMIX_ROOT", base)
